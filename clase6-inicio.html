@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts Quicksand 300 500 700 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="./Platzi Yard Sale/Platzi_YardSale_Logos/favicon_yard_sale.svg" type="image/x-icon">
+    <title>Curso Frontend Práctico</title>
+
+    <style>
+        :root{
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body{
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .cards-container{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 240px);
+                gap: 26px;
+                place-content: center;
+        }
+
+        .product-card{
+            width: 240px;
+        }
+
+        .product-card img{
+            width: 240px;
+            height: 240px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        .product-info{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+        }
+
+        .product-info figure {
+            margin: 0;
+        }
+
+        .product-info figure img {
+            width: 35px;
+            height: 35px;
+        }
+
+        .product-info div p:nth-child(1){
+            font-weight: bold;
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+
+        .product-info div p:nth-child(2){
+            font-size: var(--sm);
+            margin-top: 0;
+            margin-bottom: 0;
+            color: var(--very-light-pink);
+        }
+
+        .primary-button{
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+            margin-top: 8px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+        }
+
+
+        @media (max-width:640px){
+            .cards-container{
+                grid-template-columns: repeat(auto-fill, 140px);  
+        }
+
+            .product-card{
+                width: 140px;
+            }
+
+            .product-card img{
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <div class="menu">
+    <a href="./clase11-navbar.html">
+        <button class="primary-button add-to-cart-button">
+            <img src="./Platzi Yard Sale/Platzi_YardSale_Logos/favicon_yard_sale.svg" alt="Start">
+                NavBar
+        </button>
+    </a>
+
+    <a href="./clase7-menuDesktop.html">
+        <button class="primary-button add-to-cart-button">
+            <img src="./Platzi Yard Sale/Platzi_YardSale_Logos/favicon_yard_sale.svg" alt="Start">
+                Menú
+        </button>
+    </a>
+
+    <a href="./clase12-detalle.html">
+        <button class="primary-button add-to-cart-button">
+            <img src="./Platzi Yard Sale/Platzi_YardSale_Logos/favicon_yard_sale.svg" alt="Start">
+                Detalle
+        </button>
+    </a>
+
+    <a href="./clase9-miOrden.html">
+        <button class="primary-button add-to-cart-button">
+            <img src="./Platzi Yard Sale/Platzi_YardSale_Logos/favicon_yard_sale.svg" alt="Start">
+                Mis Ordenes
+        </button>
+    </a>
+
+    </div>
+
+    <br><br>
+
+    <section class="main-container">
+        <div class="cards-container">
+
+            <div class="product-card">
+                <img src="./Platzi Yard Sale/OPTRA.jpg" alt="Optra">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Optra</p>
+                    </div>
+                    <figure>
+                        <img src="./Platzi Yard Sale/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./Platzi Yard Sale/ChevroletSpark_2013_01.webp" alt="Spark">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Spark</p>
+                    </div>
+                    <figure>
+                        <img src="./Platzi Yard Sale/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./Platzi Yard Sale/chevy.webp" alt="Chevy">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Chevy</p>
+                    </div>
+                    <figure>
+                        <img src="./Platzi Yard Sale/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./Platzi Yard Sale/corsa.webp" alt="Corsa">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Corsa</p>
+                    </div>
+                    <figure>
+                        <img src="./Platzi Yard Sale/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./Platzi Yard Sale/malibu.jpg" alt="Malibu">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Malibu</p>
+                    </div>
+                    <figure>
+                        <img src="./Platzi Yard Sale/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./Platzi Yard Sale/matiz.jpg" alt="Matiz">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Matiz</p>
+                    </div>
+                    <figure>
+                        <img src="./Platzi Yard Sale/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./Platzi Yard Sale/meriva.webp" alt="Meriva">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Meriva</p>
+                    </div>
+                    <figure>
+                        <img src="./Platzi Yard Sale/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./Platzi Yard Sale/monza.webp" alt="Monza">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Monza</p>
+                    </div>
+                    <figure>
+                        <img src="./Platzi Yard Sale/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./Platzi Yard Sale/silverado.jpeg" alt="Silverado">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Silverado</p>
+                    </div>
+                    <figure>
+                        <img src="./Platzi Yard Sale/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./Platzi Yard Sale/sonic.jpg" alt="Sonic">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Sonic</p>
+                    </div>
+                    <figure>
+                        <img src="./Platzi Yard Sale/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./Platzi Yard Sale/suburban.webp" alt="Suburban">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Suburban</p>
+                    </div>
+                    <figure>
+                        <img src="./Platzi Yard Sale/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./Platzi Yard Sale/2024-chevrolet-trax-ng-exterior.avif" alt="Trax">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Trax</p>
+                    </div>
+                    <figure>
+                        <img src="./Platzi Yard Sale/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./Platzi Yard Sale/aveo.webp" alt="Aveo">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Aveo</p>
+                    </div>
+                    <figure>
+                        <img src="./Platzi Yard Sale/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./Platzi Yard Sale/beat.jpg" alt="Beat">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Beat</p>
+                    </div>
+                    <figure>
+                        <img src="./Platzi Yard Sale/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./Platzi Yard Sale/bolt.jpg" alt="Bolt">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Bolt</p>
+                    </div>
+                    <figure>
+                        <img src="./Platzi Yard Sale/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./Platzi Yard Sale/camaro.jpg" alt="Camaro">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Camaro</p>
+                    </div>
+                    <figure>
+                        <img src="./Platzi Yard Sale/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./Platzi Yard Sale/cavalier.avif" alt="Cavalier">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Cavalier</p>
+                    </div>
+                    <figure>
+                        <img src="./Platzi Yard Sale/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./Platzi Yard Sale/chevrolet-corvette-2018-201735486_4.webp" alt="Corvette">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Corvette</p>
+                    </div>
+                    <figure>
+                        <img src="./Platzi Yard Sale/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./Platzi Yard Sale/Chevrolet-cheyenne-silverado-2019-00.jpg" alt="Cheyenne">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Cheyenne</p>
+                    </div>
+                    <figure>
+                        <img src="./Platzi Yard Sale/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+            
+        </div>
+        
+    </section>
+
+    <br>
+
+    <a href="./clase3-login.html">
+        <button class="primary-button add-to-cart-button">
+            <img src="./Platzi Yard Sale/Platzi_YardSale_Logos/favicon_yard_sale.svg" alt="salir">
+                Salir
+        </button>
+    
+</body>
+</html>
